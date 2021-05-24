@@ -1,10 +1,11 @@
 dependencies {
     // core
     implementation "androidx.core:core-ktx:$core_ktx_version"
+
+    //ui
     implementation "androidx.appcompat:appcompat:$app_compat_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
-
     implementation "com.github.bumptech.glide:glide:$glide_version"
 
     //coroutines
@@ -16,6 +17,7 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:$core_ktx_fragment"
     implementation "androidx.activity:activity-ktx:$core_ktx_activity"
     implementation "com.github.yogacp:android-viewbinding:$view_binding_delegate"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     // network
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -24,6 +26,7 @@ dependencies {
 
     // database
     implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
     // dependency injection
