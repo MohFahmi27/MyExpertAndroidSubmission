@@ -1,3 +1,4 @@
 rootProject.name = "MyExpertAndroidSubmission"
 include ':app'
 include ':core'
+include ':bookmark'

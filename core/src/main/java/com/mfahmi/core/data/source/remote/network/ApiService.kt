@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("movie/latest")
-    fun getLatestMovies(@Query("api_key") apiKey: String = API_KEY): ResponseItemsMovie
+    @GET("movie/popular")
+    suspend fun getLatestMovies(@Query("api_key") apiKey: String = API_KEY): ResponseItemsMovie
 }

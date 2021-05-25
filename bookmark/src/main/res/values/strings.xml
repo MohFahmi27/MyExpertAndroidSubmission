@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_again">Hello Again,</string>
+    <string name="bookmark_description">This where you put something you bookmarked before</string>
+    <string name="empty_msg">Looks like you don\'t have anything bookmark yet</string>
+</resources>

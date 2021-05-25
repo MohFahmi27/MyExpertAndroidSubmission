@@ -1,6 +1,5 @@
 package com.mfahmi.core.utils
 
-import com.mfahmi.core.data.Resource
 import com.mfahmi.core.data.source.remote.network.ApiResponse
 import kotlinx.coroutines.flow.*
 

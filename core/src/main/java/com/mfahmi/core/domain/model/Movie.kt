@@ -13,5 +13,5 @@ data class Movie(
     val voteAverage: Double,
     val voteCount: Double,
     val originalLanguage: String,
-    var isBookmark: Boolean = false
+    var isBookmark: Boolean
 ) : Parcelable

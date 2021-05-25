@@ -37,9 +37,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dynamicFeatures = [':bookmark']
 }
 
 dependencies {
     implementation project(":core")
+    implementation "com.github.Shashank02051997:FancyToast-Android:$fancy_toast"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

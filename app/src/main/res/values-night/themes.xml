@@ -22,6 +22,7 @@
     <style name="Theme.MyExpertAndroidSubmission.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="backgroundColor">@color/secondaryDarkColor</item>
     </style>
 
     <style name="DefaultTextView" parent="Widget.AppCompat.TextView">

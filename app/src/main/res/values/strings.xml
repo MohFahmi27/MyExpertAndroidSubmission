@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">Movies Catalogue</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome">Hello welcome,</string>
     <string name="app_description">Millions of movies waiting to discover.</string>
     <string name="app_icon">App Icon</string>
-    <string name="item_poster">Item Poster</string>
-    <string name="arrow_right">Arrow Right</string>
+    <string name="latest_movie">Latest Movie</string>
+    <string name="bookmark_button">Bookmark Button</string>
+    <string name="add_bookmark">Add Bookmark</string>
+    <string name="vote_count">Vote Count</string>
+    <string name="vote_average">Vote Average</string>
+    <string name="overview">Overview</string>
+    <string name="rating_format">%.1f /10</string>
+    <string name="msg_add">You Bookmarked Something…</string>
+    <string name="msg_remove">You Removed Something…</string>
+    <string name="title_bookmark">Bookmark</string>
 </resources>

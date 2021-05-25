@@ -1,7 +1,7 @@
 package com.mfahmi.core.domain.repository
 
-import com.mfahmi.core.data.Resource
 import com.mfahmi.core.domain.model.Movie
+import com.mfahmi.core.utils.Resource
 import kotlinx.coroutines.flow.Flow
 
 
