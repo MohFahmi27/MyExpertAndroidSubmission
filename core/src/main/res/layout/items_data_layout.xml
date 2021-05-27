@@ -15,7 +15,8 @@
         android:layout_marginStart="@dimen/dimen_standard"
         app:layout_constraintBottom_toBottomOf="@+id/img_poster"
         app:layout_constraintTop_toTopOf="@+id/img_poster"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/img_poster"

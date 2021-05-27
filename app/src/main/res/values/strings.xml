@@ -10,6 +10,7 @@
     <string name="vote_average">Vote Average</string>
     <string name="overview">Overview</string>
     <string name="rating_format">%.1f /10</string>
+    <string name="detail_content_format">%1s - %2s</string>
     <string name="msg_add">You Bookmarked Something…</string>
     <string name="msg_remove">You Removed Something…</string>
     <string name="title_bookmark">Bookmark</string>

@@ -31,4 +31,11 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/google_sans_font</item>
     </style>
+
+    <style name="ShapeAppearanceOverlay.App.SelectedCornerRadius" parent="">
+        <item name="cornerSizeBottomLeft">30dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerSizeBottomRight">30dp</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+    </style>
 </resources>

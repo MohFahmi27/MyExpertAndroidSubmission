@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/primaryColor"
     app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_start"
@@ -41,7 +40,7 @@
             style="@style/DefaultTextView"
             android:layout_width="0dp"
             android:layout_marginStart="@dimen/dimen_standard"
-            android:layout_marginTop="@dimen/dimen_standard"
+            android:layout_marginTop="@dimen/dimen_small"
             android:layout_marginEnd="@dimen/dimen_standard"
             android:textColor="@color/primaryTextColor"
             android:textSize="20sp"
@@ -51,27 +50,16 @@
             tools:text="@tools:sample/lorem" />
 
         <TextView
-            android:id="@+id/tv_release_date"
-            style="@style/DefaultTextView"
-            android:layout_marginTop="@dimen/dimen_standard"
-            android:textColor="@color/secondaryColor"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_title_detail"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail"
-            tools:text="11-12-2021" />
-
-        <TextView
             android:id="@+id/tv_original_lang_detail"
             style="@style/DefaultTextView"
-            android:layout_marginStart="@dimen/dimen_small"
             android:textColor="@color/primaryTextColor"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_release_date"
+            android:layout_marginTop="@dimen/dimen_small"
             app:layout_constraintEnd_toStartOf="@+id/guideline_end"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/tv_release_date"
-            app:layout_constraintTop_toTopOf="@+id/tv_release_date"
-            tools:text="en" />
+            app:layout_constraintStart_toStartOf="@+id/tv_title_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail"
+            tools:text="en - 2021-02-01" />
 
         <TextView
             android:id="@+id/tv_vote_average_title"
@@ -125,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/dimen_standard"
             android:layout_marginVertical="@dimen/dimen_super_large"
-            app:cardBackgroundColor="@color/secondaryColor"
+            app:cardBackgroundColor="@color/secondaryDarkColor"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/guideline_end"

@@ -35,8 +35,12 @@ class DetailActivity : AppCompatActivity() {
                 lytContentDetail.tvTitleDetail.text = movie.title
                 lytContentDetail.tvRatingDetail.text =
                     resources.getString(R.string.rating_format, movie.voteAverage)
-                lytContentDetail.tvReleaseDate.text = movie.releaseDate
-                lytContentDetail.tvOriginalLangDetail.text = movie.originalLanguage
+                lytContentDetail.tvOriginalLangDetail.text =
+                    getString(
+                        R.string.detail_content_format,
+                        movie.originalLanguage,
+                        movie.releaseDate
+                    )
                 lytContentDetail.tvVoteCountDetail.text = movie.voteCount.toString()
                 lytContentDetail.tvOverview.text = movie.overview
                 var bookmarkStatus = movie.isBookmark
