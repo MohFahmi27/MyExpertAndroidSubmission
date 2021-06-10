@@ -16,5 +16,5 @@ interface MovieDao {
     suspend fun insertMovies(movieEntities: List<MovieEntity>)
 
     @Update
-    fun updateBookmarkMovie(movieEntity: MovieEntity)
+    suspend fun updateBookmarkMovie(movieEntity: MovieEntity)
 }

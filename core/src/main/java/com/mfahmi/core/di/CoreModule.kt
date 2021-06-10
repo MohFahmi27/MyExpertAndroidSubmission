@@ -8,7 +8,6 @@ import com.mfahmi.core.data.source.remote.RemoteDataSource
 import com.mfahmi.core.data.source.remote.network.ApiCredentials
 import com.mfahmi.core.data.source.remote.network.ApiService
 import com.mfahmi.core.domain.repository.MovieRepositoryInterface
-import com.mfahmi.core.utils.AppExecutors
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -46,6 +45,5 @@ val networkModule = module {
 val repositoryModule = module {
     single { LocalDataSource(get()) }
     single { RemoteDataSource(get()) }
-    factory { AppExecutors() }
-    single<MovieRepositoryInterface> { MovieRepository(get(), get(), get()) }
+    single<MovieRepositoryInterface> { MovieRepository(get(), get()) }
 }

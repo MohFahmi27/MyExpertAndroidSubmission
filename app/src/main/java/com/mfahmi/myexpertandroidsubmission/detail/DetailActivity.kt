@@ -2,12 +2,9 @@ package com.mfahmi.myexpertandroidsubmission.detail
 
 import android.os.Bundle
 import android.viewbinding.library.activity.viewBinding
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
 import com.mfahmi.core.domain.model.Movie
 import com.mfahmi.myexpertandroidsubmission.R
 import com.mfahmi.myexpertandroidsubmission.databinding.ActivityDetailBinding
@@ -30,7 +27,9 @@ class DetailActivity : AppCompatActivity() {
     private fun populateDetailView(movie: Movie?) {
         movie?.let {
             with(binding) {
-                imgPosterDetail.setDetailGlide(movie.posterPath)
+                Glide.with(binding.root)
+                    .load("https://image.tmdb.org/t/p/w500/${movie.posterPath}")
+                    .into(imgPosterDetail)
 
                 lytContentDetail.tvTitleDetail.text = movie.title
                 lytContentDetail.tvRatingDetail.text =
@@ -68,12 +67,6 @@ class DetailActivity : AppCompatActivity() {
                 false
             ).show()
         }
-    }
-
-    private fun ImageView.setDetailGlide(urlPath: String) {
-        Glide.with(this).load("https://image.tmdb.org/t/p/w500${urlPath}")
-            .apply(RequestOptions().transform(RoundedCorners(40)))
-            .into(this)
     }
 
     private fun setStateButton(state: Boolean) {

@@ -5,11 +5,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.viewbinding.library.activity.viewBinding
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mfahmi.core.ui.MoviesRecyclerviewAdapter
 import com.mfahmi.core.utils.Resource.*
+import com.mfahmi.myexpertandroidsubmission.adapter.MoviesRecyclerviewAdapter
 import com.mfahmi.myexpertandroidsubmission.databinding.ActivityMainBinding
 import com.mfahmi.myexpertandroidsubmission.detail.DetailActivity
 import com.shashank.sony.fancytoastlib.FancyToast
@@ -44,13 +43,13 @@ class MainActivity : AppCompatActivity() {
         viewModel.movies.observe(this) {
             if (it != null) {
                 when (it) {
-                    is Loading -> binding.pgbMain.setVisibility(true)
+                    is Loading -> binding.smfMain.setVisibility(true)
                     is Success -> {
-                        binding.pgbMain.setVisibility(false)
+                        binding.smfMain.setVisibility(false)
                         movieAdapter.setData(it.data)
                     }
                     is Error -> {
-                        binding.pgbMain.setVisibility(false)
+                        binding.smfMain.setVisibility(false)
                         FancyToast.makeText(
                             this,
                             it.message,
@@ -66,11 +65,12 @@ class MainActivity : AppCompatActivity() {
         with(binding.rvMoviesPopular) {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
+            setItemViewCacheSize(10)
             adapter = movieAdapter
         }
     }
 
-    private fun ProgressBar.setVisibility(state: Boolean) {
+    private fun View.setVisibility(state: Boolean) {
         if (state) this.visibility = View.VISIBLE else this.visibility = View.GONE
     }
 }

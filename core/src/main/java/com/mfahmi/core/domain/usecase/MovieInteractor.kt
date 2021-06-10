@@ -12,7 +12,7 @@ class MovieInteractor(private val movieRepository: MovieRepositoryInterface) : M
     override fun getBookmarkedMovieFromRepo(): Flow<List<Movie>> =
         movieRepository.getBookmarkedMoviesData()
 
-    override fun setBookmarkMovieFromRepo(movie: Movie, state: Boolean) =
+    override suspend fun setBookmarkMovieFromRepo(movie: Movie, state: Boolean) =
         movieRepository.setBookmarkMovieFromDB(movie, state)
 
 }

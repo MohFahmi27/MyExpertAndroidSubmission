@@ -1,17 +1,13 @@
-package com.mfahmi.core.ui
+package com.mfahmi.myexpertandroidsubmission.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.request.RequestOptions
-import com.mfahmi.core.R
-import com.mfahmi.core.databinding.ItemsDataLayoutBinding
 import com.mfahmi.core.domain.model.Movie
+import com.mfahmi.myexpertandroidsubmission.R
+import com.mfahmi.myexpertandroidsubmission.databinding.ItemsDataLayoutBinding
 
 class MoviesRecyclerviewAdapter :
     RecyclerView.Adapter<MoviesRecyclerviewAdapter.MainRecyclerviewViewHolder>() {
@@ -31,7 +27,9 @@ class MoviesRecyclerviewAdapter :
         private val binding = ItemsDataLayoutBinding.bind(itemView)
         fun bind(movies: Movie) {
             with(binding) {
-                imgPoster.setRoundedGlide(movies.posterPath)
+                Glide.with(itemView)
+                    .load("https://image.tmdb.org/t/p/w500/${movies.posterPath}")
+                    .into(imgPoster)
                 tvTitle.text = movies.title
                 tvRating.text =
                     itemView.context.getString(R.string.rating_format, movies.voteAverage)
@@ -56,20 +54,7 @@ class MoviesRecyclerviewAdapter :
 
     override fun onBindViewHolder(holder: MainRecyclerviewViewHolder, position: Int) {
         holder.bind(listItems[position])
-        holder.itemView.setAnimationRecyclerView()
     }
 
     override fun getItemCount(): Int = listItems.size
-
-    private fun ImageView.setRoundedGlide(urlPath: String) {
-        Glide.with(context).load("https://image.tmdb.org/t/p/w500/$urlPath")
-            .apply(RequestOptions().override(140, 180)).apply(
-                RequestOptions()
-                    .transform(RoundedCorners(15))
-            ).into(this)
-    }
-
-    private fun View.setAnimationRecyclerView() {
-        startAnimation(AnimationUtils.loadAnimation(context, R.anim.recyclerview_anim_items))
-    }
 }

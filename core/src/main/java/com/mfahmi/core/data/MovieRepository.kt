@@ -6,7 +6,6 @@ import com.mfahmi.core.data.source.remote.network.ApiResponse
 import com.mfahmi.core.data.source.remote.response.MovieResponse
 import com.mfahmi.core.domain.model.Movie
 import com.mfahmi.core.domain.repository.MovieRepositoryInterface
-import com.mfahmi.core.utils.AppExecutors
 import com.mfahmi.core.utils.DataMapper.mapDomainToEntity
 import com.mfahmi.core.utils.DataMapper.mapEntitiesToDomain
 import com.mfahmi.core.utils.DataMapper.mapResponsesToEntities
@@ -17,8 +16,7 @@ import kotlinx.coroutines.flow.map
 
 class MovieRepository(
     private val remoteDataSource: RemoteDataSource,
-    private val localDataSource: LocalDataSource,
-    private val appExecutors: AppExecutors
+    private val localDataSource: LocalDataSource
 ) : MovieRepositoryInterface {
 
     override fun getAllMoviesData(): Flow<Resource<List<Movie>>> =
@@ -42,10 +40,9 @@ class MovieRepository(
     override fun getBookmarkedMoviesData(): Flow<List<Movie>> =
         localDataSource.getBookmarkedMoviesFromDB().map { mapEntitiesToDomain(it) }
 
-    override fun setBookmarkMovieFromDB(movie: Movie, state: Boolean) {
+    override suspend fun setBookmarkMovieFromDB(movie: Movie, state: Boolean) {
         val movieEntity = mapDomainToEntity(movie)
-        appExecutors.diskIO()
-            .execute { localDataSource.updateMovieFromDB(movieEntity, state) }
+        localDataSource.updateMovieFromDB(movieEntity, state)
     }
 
 }

@@ -14,4 +14,10 @@
     <string name="msg_add">You Bookmarked Something…</string>
     <string name="msg_remove">You Removed Something…</string>
     <string name="title_bookmark">Bookmark</string>
+    <string name="overview_format">%s…</string>
+    <string name="item_poster">Item Poster</string>
+    <string name="arrow_right">Arrow Right</string>
+    <string name="hello_again">Hello Again,</string>
+    <string name="bookmark_description">This where you put something you bookmarked before</string>
+    <string name="empty_msg">Looks like you don\'t have anything bookmark yet</string>
 </resources>

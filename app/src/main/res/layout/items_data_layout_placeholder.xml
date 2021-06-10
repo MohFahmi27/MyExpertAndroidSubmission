@@ -11,79 +11,53 @@
         android:id="@+id/shape"
         android:layout_width="10dp"
         android:layout_height="0dp"
-        android:src="@drawable/items_shape"
         android:layout_marginStart="@dimen/dimen_standard"
+        android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="@+id/img_poster"
-        app:layout_constraintTop_toTopOf="@+id/img_poster"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_poster"
         tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/img_poster"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="@dimen/dimen_standard"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
         android:layout_marginVertical="@dimen/dimen_large"
-        android:contentDescription="@string/item_poster"
+        android:layout_marginStart="@dimen/dimen_standard"
+        android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/shape"
         app:layout_constraintTop_toTopOf="parent"
         tools:scaleType="centerCrop"
-        tools:src="@tools:sample/avatars" />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_title"
         style="@style/DefaultTextView"
         android:layout_width="0dp"
         android:layout_marginHorizontal="@dimen/dimen_standard"
-        android:textColor="@color/primaryTextColor"
+        android:background="@android:color/darker_gray"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/img_poster"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/img_poster"
         app:layout_constraintTop_toTopOf="@+id/img_poster"
-        app:layout_constraintVertical_bias="0.10"
-        tools:text="@tools:sample/lorem" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="@dimen/dimen_small"
-        android:src="@drawable/ic_rating"
-        app:layout_constraintStart_toStartOf="@+id/tv_title"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/tv_rating"
-        style="@style/DefaultTextView"
-        android:layout_marginStart="@dimen/dimen_small"
-        android:textAlignment="center"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        tools:text="8.5" />
+        app:layout_constraintVertical_bias="0.10" />
 
     <TextView
         android:id="@+id/tv_overview_items"
         style="@style/DefaultTextView"
         android:layout_width="0dp"
-        android:layout_marginTop="@dimen/dimen_standard"
         android:layout_marginEnd="@dimen/dimen_standard"
-        android:textColor="@color/secondaryColor"
-        android:textSize="13sp"
+        android:background="@android:color/darker_gray"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_rating"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="@tools:sample/lorem" />
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

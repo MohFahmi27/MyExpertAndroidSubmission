@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mfahmi.bookmark.databinding.ActivityBookmarkBinding
 import com.mfahmi.bookmark.di.bookmarkModule
-import com.mfahmi.core.ui.MoviesRecyclerviewAdapter
+import com.mfahmi.myexpertandroidsubmission.adapter.MoviesRecyclerviewAdapter
 import com.mfahmi.myexpertandroidsubmission.detail.DetailActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules

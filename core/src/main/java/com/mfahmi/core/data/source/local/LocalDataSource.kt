@@ -13,7 +13,7 @@ class LocalDataSource(private val movieDao: MovieDao) {
     suspend fun insertMoviesToDB(moviesEntities: List<MovieEntity>) =
         movieDao.insertMovies(moviesEntities)
 
-    fun updateMovieFromDB(movieEntity: MovieEntity, status: Boolean) {
+    suspend fun updateMovieFromDB(movieEntity: MovieEntity, status: Boolean) {
         movieEntity.isBookmark = status
         movieDao.updateBookmarkMovie(movieEntity)
     }

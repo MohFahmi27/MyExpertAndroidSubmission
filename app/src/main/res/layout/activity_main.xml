@@ -44,8 +44,8 @@
                 <TextView
                     android:id="@+id/tv_welcome_main"
                     style="@style/DefaultTextView"
-                    android:layout_marginTop="@dimen/dimen_super_large"
                     android:layout_marginStart="@dimen/dimen_standard"
+                    android:layout_marginTop="@dimen/dimen_super_large"
                     android:text="@string/welcome"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="22sp"
@@ -81,16 +81,39 @@
         android:id="@+id/rv_movies_popular"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        tools:listitem="@layout/items_data_layout" />
+        android:layout_marginBottom="@dimen/dimen_super_large"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
-    <ProgressBar
-        android:id="@+id/pgb_main"
-        style="@style/Widget.AppCompat.ProgressBar"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_vertical|center"
-        android:visibility="invisible" />
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/smf_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:shimmer_auto_start="true">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/items_data_layout_placeholder" />
+
+                <include layout="@layout/items_data_layout_placeholder" />
+
+                <include layout="@layout/items_data_layout_placeholder" />
+
+                <include layout="@layout/items_data_layout_placeholder" />
+
+                <include layout="@layout/items_data_layout_placeholder" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_bookmark_main"

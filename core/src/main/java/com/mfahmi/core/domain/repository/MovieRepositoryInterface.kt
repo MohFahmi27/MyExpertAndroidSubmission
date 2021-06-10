@@ -11,6 +11,6 @@ interface MovieRepositoryInterface {
 
     fun getBookmarkedMoviesData(): Flow<List<Movie>>
 
-    fun setBookmarkMovieFromDB(movie: Movie, state: Boolean)
+    suspend fun setBookmarkMovieFromDB(movie: Movie, state: Boolean)
 
 }
