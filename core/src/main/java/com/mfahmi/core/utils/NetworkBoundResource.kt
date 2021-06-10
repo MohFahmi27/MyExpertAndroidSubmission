@@ -1,10 +1,13 @@
 package com.mfahmi.core.utils
 
 import com.mfahmi.core.data.source.remote.network.ApiResponse
+import com.mfahmi.core.utils.Resource.Error
+import com.mfahmi.core.utils.Resource.Success
 import kotlinx.coroutines.flow.*
 
 abstract class NetworkBoundResource<ResultType, RequestType> {
 
+    @Suppress("RemoveExplicitTypeArguments")
     private var result: Flow<Resource<ResultType>> = flow {
         emit(Resource.Loading())
         val dbSource = loadFromDB().first()
@@ -13,30 +16,19 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
             when (val apiResponse = createCall().first()) {
                 is ApiResponse.Success -> {
                     saveCallResult(apiResponse.data)
-                    emitAll(loadFromDB().map {
-                        Resource.Success(it)
-                    })
+                    emitAll(loadFromDB().map { Success(it) })
                 }
-                is ApiResponse.Empty -> {
-                    emitAll(loadFromDB().map {
-                        Resource.Success(it)
-                    })
-                }
-                is ApiResponse.Error -> {
-                    onFetchFailed()
-                    emit(
-                        Resource.Error<ResultType>(apiResponse.errorMessage)
-                    )
-                }
+                is ApiResponse.Empty -> emitAll(loadFromDB().map {
+                    Success(it)
+                })
+                is ApiResponse.Error -> emit(Error<ResultType>(apiResponse.errorMessage))
             }
         } else {
             emitAll(loadFromDB().map {
-                Resource.Success(it)
+                Success(it)
             })
         }
     }
-
-    protected open fun onFetchFailed() {}
 
     protected abstract fun loadFromDB(): Flow<ResultType>
 

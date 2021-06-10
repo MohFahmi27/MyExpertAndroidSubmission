@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/dimen_super_small"
-    android:layout_marginVertical="@dimen/dimen_super_small">
+    android:layout_marginVertical="@dimen/dimen_super_small"
+    tools:ignore="UnusedResources">
 
     <ImageView
         android:id="@+id/shape"

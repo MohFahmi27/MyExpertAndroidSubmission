@@ -3,7 +3,6 @@
     <string name="welcome">Hello welcome,</string>
     <string name="app_description">Millions of movies waiting to discover.</string>
     <string name="app_icon">App Icon</string>
-    <string name="latest_movie">Latest Movie</string>
     <string name="bookmark_button">Bookmark Button</string>
     <string name="add_bookmark">Add Bookmark</string>
     <string name="vote_count">Vote Count</string>
@@ -16,7 +15,6 @@
     <string name="title_bookmark">Bookmark</string>
     <string name="overview_format">%s…</string>
     <string name="item_poster">Item Poster</string>
-    <string name="arrow_right">Arrow Right</string>
     <string name="hello_again">Hello Again,</string>
     <string name="bookmark_description">This where you put something you bookmarked before</string>
     <string name="empty_msg">Looks like you don\'t have anything bookmark yet</string>

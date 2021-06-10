@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyExpertAndroidSubmission.NoActionBar"
         tools:ignore="AllowBackup">
-        <activity android:name=".detail.DetailActivity"></activity>
+        <activity android:name=".detail.DetailActivity" />
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
