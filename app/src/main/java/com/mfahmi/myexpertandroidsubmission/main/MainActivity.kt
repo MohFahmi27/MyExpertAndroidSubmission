@@ -73,4 +73,8 @@ class MainActivity : AppCompatActivity() {
     private fun View.setVisibility(state: Boolean) {
         if (state) this.visibility = View.VISIBLE else this.visibility = View.GONE
     }
+
+    override fun onBackPressed() {
+        finishAfterTransition()
+    }
 }
