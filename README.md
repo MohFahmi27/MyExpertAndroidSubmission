@@ -5,8 +5,11 @@ This is submission for Menjadi Android Developer Expert in <a href="https://www.
 >**Note:** This repository have branch for specific submission.
 
   1. Master - Main Branch (The most recent submission).
-  2. <a href="#">Submission 1</a>
-  3. <a href="#">Submission 2</a>
+  2. <a href="https://github.com/MohFahmi27/MyExpertAndroidSubmission/tree/submission-1">Submission 1</a>
   
-  ## Submission Screenshot:
-  >COMING SOON
+## Submission Screenshot:
+<p align="center">
+  <img src="https://github.com/MohFahmi27/MyExpertAndroidSubmission/blob/master/assets/Screenshot_20210615-213315_Movies%20Catalogue.jpg" width="250"/>
+  <img src="https://github.com/MohFahmi27/MyExpertAndroidSubmission/blob/master/assets/Screenshot_20210615-213327_Movies%20Catalogue.jpg" width="250"/>
+  <img src="https://github.com/MohFahmi27/MyExpertAndroidSubmission/blob/master/assets/Screenshot_20210615-213348_Movies%20Catalogue.jpg" width="250"/>
+</p>
